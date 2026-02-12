@@ -1,0 +1,1560 @@
+body {
+    position: absolute;
+    background-color: #A9745B;
+    font-family: 'Palatino Linotype';
+    height: 62em;
+    width: 100em;
+}
+
+.destacado {
+    color: #B26E45;
+}
+
+.libro {
+    position: absolute;
+    background-color: rgba(140, 90, 60, 1);
+    border: 0.4em solid rgba(140, 90, 60, 1);
+    border-radius: 0.2em;
+    margin: 5% 5% 5% 5%;
+    z-index: 1;
+    left: 1%;
+    top: 1%;
+    box-sizing: border-box;
+    box-shadow: 1em 1em 1em rgba(140, 90, 60, 0.7);
+    max-height: 50em;
+    min-height: 50em;
+    max-width: 35em;
+    min-width: 35em;
+    /* display:none; */
+
+}
+
+.libro .portada {
+    max-height: 50em;
+    min-height: 50em;
+    max-width: 30em;
+    min-width: 30em;
+    text-align: center;
+    border-left: 4em solid #B26E45;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+
+    /* display: none; */
+}
+
+.libro .portada h1 {
+    color: #B26E45;
+    font-size: 4em;
+
+}
+
+/*Portada */
+.portada {
+    border-left: 4.5em solid #8C5A3C;
+}
+
+.contenido-portada {
+    border: 1px solid #4A3728;
+    /* Marco más fino para ganar espacio */
+    width: 90%;
+    height: 100%;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F5F1E6;
+}
+
+.nombre-autor {
+    font-size: 2.2em;
+    margin: 10px 0;
+    color: #B26E45;
+    line-height: 0.9;
+    font-weight: bold;
+}
+
+.nombre-autor small {
+    font-size: 0.5em;
+    color: #4A3728;
+    display: block;
+    letter-spacing: 4px;
+    margin-top: 5px;
+}
+
+.linea-decorativa {
+    height: 2px;
+    background: #4A3728;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.editorial-box {
+    text-align: left;
+}
+
+.editorial-texto {
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0;
+    color: #8C5A3C;
+}
+
+
+.libro .folio {
+    margin: 1em;
+    margin-left: 4em;
+    background-color: #F5F1E6;
+    max-height: 38em;
+    min-height: 38em;
+    max-width: 27em;
+    min-width: 27em;
+    color: #3B2F2F;
+    padding: 1em;
+    margin-top: 5em;
+    display: none;
+    overflow-y: auto;
+}
+
+.libor .Presentacion {
+    display: none;
+}
+
+.libro .proyecto1 {
+    display: none;
+}
+
+.libro .proyecto2 {
+    display: none;
+}
+
+
+.libro .contraportada {
+    max-height: 46em;
+    min-height: 46em;
+    max-width: 26em;
+    min-width: 26em;
+    border-right: 4em solid #B26E45;
+    padding: 2em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #3B2F2F;
+    font-size: 1em;
+
+    display: none;
+}
+
+/* Presnetacion que es un índice */
+.indice-cuaderno {
+    padding: 10px;
+    font-family: 'Palatino Linotype', serif;
+}
+
+.indice-cuaderno h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #B26E45;
+    padding-bottom: 10px;
+    color: #4A3728;
+}
+
+.intro-indice {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.lista-proyectos {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-proyectos li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px dashed #d1c0a0;
+}
+
+.numero {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #B26E45;
+    margin-right: 15px;
+    font-family: 'Courier New', monospace;
+    /* Estilo máquina de escribir para el índice */
+}
+
+.info-proy .enlace-proy {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4A3728;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-proy p {
+    margin: 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #3d2b1f;
+}
+
+/*Proyecto 1*/
+
+.proyecto-detalle {
+    padding: 1em;
+    font-family: 'Palatino Linotype', serif;
+}
+
+.cabecera-proyecto h3 {
+    color: #B26E45;
+    text-transform: uppercase;
+    border-bottom: 2px solid #8C5A3C;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.ref-tecnica {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.descripcion-manuscrita {
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    font-style: italic;
+    /* Le da el toque de "nota personal" */
+    color: #333;
+}
+
+.especificaciones h4 {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    color: #4A3728;
+}
+
+.especificaciones ul {
+    list-style: "→ ";
+    /* Usamos una flecha técnica como viñeta */
+    padding-left: 1.5em;
+}
+
+.especificaciones li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.nota-adicional {
+    margin-top: 2em;
+    padding: 10px;
+    border: 1px dashed #B26E45;
+    background: rgba(178, 110, 69, 0.05);
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* Proyecto 2*/
+#aproyecto2 .especificaciones ul {
+    list-style: "✎ ";
+    /* Un toque artístico para el proyecto de diseño */
+    color: #4A3728;
+}
+
+/* Efecto de 'Sello de Calidad' para el área visual */
+#aproyecto2 .nota-adicional {
+    border: 2px solid #8C5A3C;
+    border-radius: 5px;
+    background: rgba(244, 228, 188, 0.5);
+    transform: rotate(1deg);
+    /* Ligera rotación para parecer un papel pegado */
+}
+
+/* Efecto al pasar el ratón por el proyecto */
+.lista-proyectos li:hover .numero {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+/* Contraportada interna */
+.contraportada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil-autor {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    width: 100%;
+    color: #f4e4bc;
+}
+
+.foto-autor {
+    width: 100%;
+    height: 20em;
+    /* Controla qué tan grande es la imagen */
+    overflow: hidden;
+    border: 3px solid #8C5A3C;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+.foto-autor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta la foto sin deformarla */
+    filter: sepia(0.2);
+    /* Toque antiguo para ir con el cuaderno */
+}
+
+.bio-autor h2 {
+    font-family: 'Palatino Linotype', serif;
+    margin: 0;
+    color: #F5F1E6;
+    border-bottom: 1px solid #B26E45;
+}
+
+.ubicacion {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #F5F1E6;
+    margin-top: 0.2em;
+}
+
+.descripcion-laboral {
+    line-height: 1.6;
+    color: #F5F1E6;
+    font-size: 1.1em;
+}
+
+.detalles-personales {
+    margin-top: 1em;
+    padding: 1em;
+    background: rgba(178, 110, 69, 0.1);
+    border-left: 3px solid #B26E45;
+    font-size: 0.95em;
+}
+
+/*  TARJETA INICIO */
+
+.tarjeta-presentacion {
+    display: flex;
+    width: 20em;
+    height: 12em;
+    padding: 1.5em;
+    background-color: #F5F1E6;
+    color: #3B2F2F;
+    border-radius: 0.5em;
+    box-shadow: 1em 1em 1em rgba(140, 90, 60, 0.7);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+
+
+    /*  display: none; */
+}
+
+.tarjeta-presentacion .info-principal {
+    padding-right: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* genera los espacios */
+}
+
+.tarjeta-presentacion .info-principal .nombre {
+    font-size: 1.3em;
+    margin: 0 0 0.1em 0;
+}
+
+.tarjeta-presentacion .info-principal .titulo {
+    font-size: 0.9em;
+    color: #3B2F2F;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid #B26E45;
+    padding-bottom: 0.5em;
+}
+
+.tarjeta-presentacion .info-principal .datos-contacto p {
+    font-size: 0.8em;
+    margin: 0.2em 0;
+}
+
+.tarjeta-presentacion .info-principal .enlace {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tarjeta-presentacion .info-adicional {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.tarjeta-presentacion .info-adicional .logo {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #B26E45;
+    line-height: 1;
+    letter-spacing: -0.1em;
+    text-shadow: 0.1em 0.1em 0.1em rgba(140, 90, 60, 0.7);
+}
+
+.tarjeta-presentacion .info-adicional .qr {
+    width: 5em;
+    height: 5em;
+    background-color: #3B2F2F;
+    border-radius: 0.5em;
+
+}
+
+/* SELECTORES */
+input[type="number"] {
+    background-color: #F5F1E6;
+    ;
+}
+
+input[type="number"]::placeholder {
+    color: #B26E45;
+    background-color: #F5F1E6;
+}
+
+/* 1. Eliminamos las flechas por defecto del input number */
+#pagina::-webkit-inner-spin-button,
+#pagina::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 2. Estilos base compartidos (Posición, Fuente y Color del signo) */
+#btn-prev,
+#pagina,
+#btn-next,
+#identificadorpágina {
+    position: absolute;
+    top: 92%;
+    height: 2em;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2em;
+    font-size: 1.5em;
+    color: #B26E45;
+    font-weight: bold;
+    outline: none;
+    /* Elimina el borde negro de selección en todos */
+    transition: all 0.3s ease;
+}
+
+/* 3. Estilo específico para el círculo del número de PÁGINA */
+#pagina {
+    left: 16em;
+    width: 2em;
+    background-color: #F5F1E6;
+    border: 1px solid #8C5A3C;
+    border-radius: 50%;
+    cursor: default;
+}
+
+#identificadorpágina {
+    left: 16em;
+    top: 96%;
+    width: 2em;
+    color: #F5F1E6;
+    border-radius: 50%;
+}
+
+/* 4. Estilo específico para los BOTONES (Sin círculo, solo el signo) */
+#btn-prev,
+#btn-next {
+    width: 1.5em;
+    background: none;
+    /* Quita el fondo circular */
+    border: none;
+    /* Quita el borde circular */
+    color: #F5F1E6;
+    ;
+}
+
+#btn-prev {
+    left: 14.7em;
+}
+
+#btn-next {
+    left: 18em;
+}
+
+/* 5. Comportamiento al hacer FOCO en el input de página */
+#pagina:focus {
+    /* Resplandor color tierra en lugar de negro */
+    box-shadow: 0 0 10px rgba(178, 110, 69, 0.6);
+    border-color: #B26E45;
+    background-color: #FFFFFF;
+    color: #8C5A3C;
+}
+
+/* 6. Comportamiento al clicar en los botones (Feedback visual) */
+#btn-prev:active,
+#btn-next:active {
+    transform: scale(0.8);
+    /* El signo se encoge un poco al pulsar */
+    color: #8C5A3C;
+    /* Se oscurece un poco */
+}
+
+/* Opcional: Cambio de color al pasar el ratón por los signos */
+#btn-prev:hover,
+#btn-next:hover {
+    color: #8C5A3C;
+}
+
+/* --- Estilos para el Marcapáginas (Nav) --- */
+
+.marcapaginas {
+
+    /* display:none; */
+    z-index: -2;
+}
+
+/* Estilo de cada marcador (el pequeño rectángulo) */
+.marcapaginas .marcador {
+    position: absolute;
+    left: 28.8em;
+    background-color: #C8b48A;
+    color: #474747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.7em;
+    padding: 2em;
+    font-weight: bold;
+    line-height: 1.5;
+    height: 0.5em;
+    margin-bottom: 0.4em;
+    width: 3em;
+    z-index: 0;
+
+    /* Da la sensacion de tirar */
+}
+
+.marcapaginas .marcador:nth-child(1) {
+    top: 10em;
+    left: 58em;
+}
+
+.marcapaginas .marcador:nth-child(2) {
+    top: 7.5em;
+    height: 25.8em;
+    writing-mode: vertical-rl;
+    padding-right: 0em;
+    padding-left: 0.55em;
+    font-size: 1.4em;
+}
+
+.marcapaginas .marcador:nth-child(5) {
+    position: absolute;
+    top: 75em;
+    left: 58em;
+    display: flex;
+    flex-direction: column;
+    width: 3em;
+}
+
+.marcapaginas .marcador:nth-child(3) {
+    position: absolute;
+    top: 8em;
+    height: 1em;
+    writing-mode: vertical-rl;
+    padding-right: 0em;
+    padding-left: 0.55em;
+    font-size: 1.4em;
+    width: 1em;
+    background-color: #F5F1E6;
+    color: #3B2F2F;
+}
+
+.marcapaginas .marcador:nth-child(4) {
+    position: absolute;
+    top: 13.25em;
+    height: 1em;
+    writing-mode: vertical-rl;
+    padding-right: 0em;
+    padding-left: 0.55em;
+    font-size: 1.4em;
+    width: 1em;
+    background-color: #F5F1E6;
+    color: #3B2F2F;
+}
+
+.marcapaginas .marcador {
+    transform-origin: left;
+}
+
+.marcapaginas .marcador:hover:first-child,
+.marcapaginas .marcador:hover:nth-child(5) {
+    background-color: #B26E45;
+    transform: scaleX(1.5);
+    transition: 0.5s ease-in-out;
+}
+
+.marcapaginas .marcador:hover:nth-child(2) {
+    /* font-size: 2em; */
+    transform: scaleX(1.5);
+    background-color: #B26E45;
+    transition: 0.5s ease-in-out;
+}
+
+.marcapaginas .marcador:hover:nth-child(3),
+.marcapaginas .marcador:hover:nth-child(4) {
+    /* font-size: 2em; */
+    transform: scaleX(1.5);
+    background-color: #3B2F2F;
+    color: #F5F1E6;
+    transition: 0.5s ease-in-out;
+}
+
+.marcapaginas .marcador2 {
+    position: absolute;
+    top: 69em;
+    left: 58em;
+    background-color: #F5F1E6;
+    color: #474747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.7em;
+    padding: 2em;
+    font-weight: bold;
+    line-height: 1.5;
+    height: 0.5em;
+    margin-bottom: 0.4em;
+    width: 2.5em;
+    transform-origin: left;
+}
+
+.marcapaginas .marcador2:hover {
+    transform: scaleX(1.5);
+    background-color: #3B2F2F;
+    color: #F5F1E6;
+    transition: 0.5s ease-in-out;
+}
+
+#portada {
+    position: absolute;
+    left: 9.1em;
+    top: 5.1em;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #B26E45;
+    color: #121212;
+    padding: 1em;
+    height: 2em;
+    transform-origin: bottom;
+    font-weight: bold;
+    width: 3.7em;
+    border: #B26E45;
+
+}
+
+#portada:hover {
+    transform: scaleY(1.5);
+
+}
+
+/*  TARJETA final, BIBLIOTECA inicio */
+
+.proyectos-modal {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: rgba(59, 47, 47, 0.85);
+}
+
+.proyectos-modal .bibliotecaabierta {
+    background-color: #F5F1E6;
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.25em rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 65%;
+    left: 15%;
+    color: #3B2F2F;
+
+}
+
+.proyectos-modal .bibliotecaabierta a {
+    text-decoration: none;
+    color: #B26E45;
+    font-weight: bold;
+}
+
+.proyectos-modal .bibliotecaabierta table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.proyectos-modal .bibliotecaabierta caption.destacado {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.625em;
+    text-align: left;
+    color: #B26E45;
+}
+
+.proyectos-modal .bibliotecaabierta th {
+    background-color: #B26E45;
+    color: black;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-align: left;
+    border: 0.5em solid #B26E45;
+}
+
+.proyectos-modal .bibliotecaabierta td {
+    padding: 0.5em 1em;
+    border: 0.5em solid #F5F1E6;
+}
+
+.proyectos-modal .bibliotecaabierta td:first-child {
+    color: #3B2F2F;
+    font-style: italic;
+}
+
+.proyectos-modal .bibliotecaabierta td a {
+    color: #4A3728;
+    text-decoration: underline;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #8C5A3C;
+    /* Color madera */
+    color: #F5F1E6;
+    border: 2px solid #3B2F2F;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 2;
+    transition: all 0.2s;
+}
+
+.cerrar-modal:hover {
+    background-color: #3B2F2F;
+    transform: scale(1.1);
+}
+
+.cerrar-modal-estanteria {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #8C5A3C;
+    /* Color madera */
+    color: #F5F1E6;
+    border: 2px solid #3B2F2F;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 2;
+    transition: all 0.2s;
+}
+
+.cerrar-modal-estanteria:hover {
+    background-color: #3B2F2F;
+    transform: scale(1.1);
+}
+
+/* LA BIBLIOTECAInteractiva y sus cosas */
+.proyectos-modal .bibliotecainteractiva {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.contenedor-estanteria {
+    position: absolute;
+    top: 2.5%;
+    left: 15%;
+    width: 550px;
+    background: #F5F1E6;
+    border: 5px solid #8C5A3C;
+}
+
+#spot-porfolio,
+#spot-proy1,
+#spot-proy2 {
+    position: absolute;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    writing-mode: vertical-lr;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#spot-miscelanea,
+#spot-videos,
+#spot-musica {
+    position: absolute;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    transform: translateY(-0.25em);
+}
+
+#spot-sudoku {
+    position: absolute;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    left: 20%;
+    top: 10%;
+}
+
+#spot-porfolio {
+    left: 9%;
+    top: 37.5%;
+    width: 9.5%;
+    height: 50%;
+}
+
+#spot-proy1 {
+    left: 21%;
+    top: 42.5%;
+    width: 8.5%;
+    height: 45%;
+}
+
+#spot-proy2 {
+    left: 32%;
+    top: 40%;
+    width: 8.5%;
+    height: 47.5%;
+}
+
+#spot-sudoku {
+    left: 85%;
+    top: 60%;
+    width: 12%;
+    height: 25%;
+}
+
+#tooltip-svg {
+    position: fixed;
+    display: none;
+    background: #3B2F2F;
+    color: #F5F1E6;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Nuevas posiciones para los CD-ROMs apoyados en la balda */
+#spot-miscelanea {
+    left: 60%;
+    top: 76.2%;
+    width: 23.5%;
+    height: 3.7%;
+}
+
+#spot-videos {
+    left: 60%;
+    top: 80%;
+    width: 23.5%;
+    height: 3.7%;
+}
+
+#spot-musica {
+    left: 60%;
+    top: 83.7%;
+    width: 23.5%;
+    height: 3.7%;
+}
+
+/* El resto se mantiene igual */
+#spot-porfolio {
+    left: 9%;
+    top: 37.5%;
+    width: 9.5%;
+    height: 50%;
+}
+
+#spot-proy1 {
+    left: 21%;
+    top: 42.5%;
+    width: 8.5%;
+    height: 45%;
+}
+
+#spot-proy2 {
+    left: 32%;
+    top: 40%;
+    width: 8.5%;
+    height: 47.5%;
+}
+
+#spot-sudoku {
+    left: 85%;
+    top: 60%;
+    width: 12%;
+    height: 25%;
+}
+
+/* Sudoku App */
+/* Estilos del Juego Sudoku */
+#sudoku-app {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translateY(-50%);
+    background: #F5F1E6;
+    padding: 20px;
+    border: 3px solid #8C5A3C;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    width: 300px;
+}
+
+.sudoku-header {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sudoku-controles {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    border: 2px solid #3B2F2F;
+    background: #3B2F2F;
+    gap: 1px;
+}
+
+.cell-s {
+    width: 32px;
+    height: 32px;
+    background: white;
+    text-align: center;
+    line-height: 32px;
+    font-family: 'Palatino Linotype';
+    font-size: 14px;
+}
+
+/* Bordes para los bloques 3x3 */
+.cell-s:nth-child(3n) {
+    border-right: 2px solid #3B2F2F;
+}
+
+.cell-s:nth-child(9n) {
+    border-right: none;
+}
+
+.cell-s:nth-child(n+19):nth-child(-n+27),
+.cell-s:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #3B2F2F;
+}
+
+.cell-s.fixed {
+    background: #E0DCCF;
+    font-weight: bold;
+    color: #000;
+}
+
+.cell-s.input-user {
+    cursor: pointer;
+    color: #B26E45;
+    outline: none;
+}
+
+.cell-s.error {
+    background: #f8d7da !important;
+    color: #721c24;
+}
+
+.cell-s.success {
+    background: #d4edda !important;
+    color: #155724;
+}
+
+#sudoku-feedback {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #8C5A3C;
+    text-align: center;
+}
+
+.sudoku-controles button {
+    background: #B26E45;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.sudoku-controles .btn-rojo {
+    background: #8c3c3c;
+}
+
+/* Ficha de prestamo */
+/* Contenedor principal de la ficha */
+.ficha-prestamo {
+    background-color: #F5F1E6;
+    border: 1px solid #D2B48C;
+    padding: 25px;
+    width: 320px;
+    margin: 30px auto;
+    box-shadow: 4px 4px 0px #A9745B;
+    /* Sombra sólida retro */
+    font-family: 'Palatino Linotype';
+    position: absolute;
+    top: 32%;
+    left: 50%;
+}
+
+/* Detalle visual de perforación superior */
+.ficha-decoracion-superior {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 2px dotted #A9745B;
+    opacity: 0.5;
+}
+
+.ficha-decoracion-inferior {
+    position: absolute;
+    top: 97%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 2px dotted #A9745B;
+    opacity: 0.5;
+}
+
+.ficha-header {
+    text-align: center;
+    border-bottom: 2px solid #8C5A3C;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.ficha-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #3B2F2F;
+    letter-spacing: 1px;
+}
+
+.ficha-header p {
+    margin: 5px 0 0;
+    font-size: 0.8em;
+    color: #8C5A3C;
+}
+
+/* Estilo de los campos */
+.campo-ficha {
+    margin-bottom: 15px;
+}
+
+.campo-ficha label {
+    display: block;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #3B2F2F;
+    margin-bottom: 5px;
+}
+
+.campo-ficha input,
+.campo-ficha textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #B26E45;
+    /* Línea de puntos para escribir encima */
+    color: #3B2F2F;
+    font-family: 'Palatino Linotype';
+    font-size: 0.9em;
+    padding: 5px 0;
+    outline: none;
+    resize: none;
+}
+
+.campo-ficha input:focus,
+.campo-ficha textarea:focus {
+    background-color: rgba(178, 110, 69, 0.05);
+    border-bottom: 1px solid #8C5A3C;
+}
+
+/* Botón principal (El Sello) */
+.btn-sellar {
+    width: 100%;
+    background-color: transparent;
+    border: 3px solid #8C5A3C;
+    color: #8C5A3C;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    margin-top: 10px;
+}
+
+.btn-sellar:hover {
+    background-color: rgba(140, 90, 60, 0.1);
+    transform: scale(1.02);
+}
+
+/* Botón para repetir (Oculto al inicio) */
+.btn-otro {
+    display: none;
+    /* Se activa por JS */
+    width: 100%;
+    background: none;
+    border: none;
+    color: #8C5A3C;
+    text-decoration: underline;
+    font-family: 'Palatino Linotype';
+    font-size: 0.7em;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn-otro:hover {
+    color: #3B2F2F;
+}
+
+/*gusanillo */
+.gusanillo-container {
+    position: absolute;
+    left: -1em;
+    top: 2%;
+    height: 96%;
+    width: 4em;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* Distribuye espacio igual */
+}
+
+.anilla {
+    position: relative;
+    height: 1.2em;
+    /* Hacemos la anilla más ancha que el contenedor para que sobresalga */
+    width: 120%;
+    /* La desplazamos hacia la izquierda para que "envuelva" el lomo */
+    left: -20%;
+
+    background: linear-gradient(to bottom,
+            #444 0%,
+            #999 30%,
+            #fff 45%,
+            #fff 55%,
+            #999 70%,
+            #444 100%);
+    border-radius: 1em;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+    transform: rotate(-4deg) skewX(-15deg);
+    z-index: 25;
+}
+
+/* El "agujero" donde la anilla entra al papel */
+.anilla::after {
+    content: '';
+    position: absolute;
+    right: 0%;
+    top: 0.1em;
+    width: 0.8em;
+    height: 1em;
+    background: #2a1f1f;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: inset 2px 2px 4px black;
+}
+
+/* Libro 2*/
+#libro2 {
+    position: absolute;
+    border: 0.4em solid rgba(140, 90, 60, 1);
+    border-radius: 0.2em;
+    margin: 5% 5% 5% 5%;
+    z-index: 0;
+    left: 73%;
+    top: 1%;
+    box-sizing: border-box;
+    box-shadow: 1em 1em 1em rgba(140, 90, 60, 0.7);
+    max-height: 50em;
+    min-height: 50em;
+    max-width: 35em;
+    min-width: 35em;
+    display: none;
+}
+
+#libro2 .portada {
+    max-height: 50em;
+    min-height: 50em;
+    max-width: 30em;
+    min-width: 30em;
+    text-align: center;
+    border-left: 4em solid #F5F1E6;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#libro2 .contenido-portada {
+    font-size: 0.7em;
+    align-items: center;
+    background: #3B2F2F;
+}
+
+
+#portadapagina2 .nombre-autor small {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #B26E45;
+}
+
+#libro2 .marcador {
+    width: 3.8em;
+    height: 4em;
+    background-color: #3B2F2F;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transform-origin: bottom;
+    text-decoration: none;
+    color: #f4e4bc;
+    transform-origin: bottom;
+    text-decoration: none;
+}
+
+#libro2 .marcador:hover {
+    transform: translateX(5px);
+    background-color: #8C5A3C;
+    ;
+    transform: scaleY(1.5);
+}
+
+
+/* Fondo técnico para la imagen de redes */
+.design-net {
+    background: repeating-linear-gradient(0deg,
+            rgba(44, 62, 80, 0.05) 0px,
+            rgba(44, 62, 80, 0.05) 1px,
+            transparent 1px,
+            transparent 20px);
+}
+
+/* Libro 3*/
+#libro3 {
+    position: absolute;
+    border-radius: 0.2em;
+    border: 0.4em solid #3B2F2F;
+    margin: 5% 5% 5% 5%;
+    z-index: 0;
+    left: 73%;
+    top: 1%;
+    max-height: 50em;
+    min-height: 50em;
+    max-width: 35em;
+    min-width: 35em;
+    background-color: #3B2F2F;
+    box-shadow: 1em 1em 1em #3B2F2F;
+    display: none;
+
+}
+
+#libro3 .portada {
+    max-height: 50em;
+    min-height: 50em;
+    max-width: 30em;
+    min-width: 30em;
+    border-left: 4em solid #f4e4bc;
+    z-index: 1;
+    background-color: #3B2F2F;
+}
+
+#libro3 .contenido-portada {
+    font-size: 0.7em;
+    align-items: center;
+    background: #f4e4bc;
+}
+
+#portadapagina3 .nombre-autor small {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #B26E45;
+}
+
+#libro3 .folio {
+    background-color: #f4e4bc;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* --- Marcadores (Pestañas laterales) --- */
+.navegacion-marcapaginas {
+    position: absolute;
+    top: -4em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    z-index: 1;
+}
+
+#libro3 .marcador {
+    width: 3.8em;
+    height: 4em;
+    background-color: #3B2F2F;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transform-origin: bottom;
+    text-decoration: none;
+}
+
+#libro3 .marcador:hover {
+    transform: translateX(5px);
+    background-color: #3B2F2F;
+    transform: scaleY(1.5);
+}
+
+
+/* Colores distintos para identificar secciones rápido */
+.m-portada {
+    background-color: #f4e4bc;
+}
+
+.m-indice {
+    background-color: #f4e4bc;
+}
+
+.m-detalle {
+    background-color: #f4e4bc;
+}
+
+/* Iconos sutiles dentro de los marcadores usando CSS puro */
+#libro3 .marcador::after {
+    color: #B26E45;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.m-portada::after {
+    content: "Portada";
+}
+
+.m-indice::after {
+    content: "índice";
+}
+
+.m-detalle::after {
+    content: "contenido";
+}
+
+.frame-imagen-proyecto {
+    width: 100%;
+    height: 12em;
+    background-color: #e0d5b5;
+    border: 1px solid #8C5A3C;
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder-img {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8em;
+    color: #3B2F2F;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Efecto de "cinta adhesiva" en las esquinas de la foto */
+.frame-imagen-proyecto::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    width: 40px;
+    height: 15px;
+    background: rgba(211, 197, 160, 0.5);
+    transform: rotate(-15deg);
+}
+
+/* --- Modal de Bienvenida --- */
+.modal-overlay-bienvenida {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 47, 47, 0.9);
+    /* Oscuro, tipo madera muy sombra */
+    z-index: 1000;
+    /* Por encima de todo */
+    display: none;
+    /* Se activa con JS */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+.carta-bienvenida {
+    position: relative;
+    width: 28em;
+    padding: 2.5em;
+    background-color: #F5F1E6;
+    /* Color papel */
+    border: 1px solid #D2B48C;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(169, 116, 91, 0.2);
+    font-family: 'Palatino Linotype', serif;
+    color: #3B2F2F;
+    text-align: center;
+    transform: rotate(-1deg);
+    /* Ligera rotación natural */
+}
+
+/* Efecto de papel doblado en esquina (opcional) */
+.carta-bienvenida::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 2em 2em 0;
+    border-style: solid;
+    border-color: rgba(59, 47, 47, 0.9) #F5F1E6;
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.sello-lacre {
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3.5em;
+    height: 3.5em;
+    background-color: #8C3C3C;
+    /* Rojo lacre */
+    border-radius: 50%;
+    border: 3px dashed #682626;
+    color: #E0DCCF;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.texto-carta h2 {
+    color: #B26E45;
+    border-bottom: 2px solid #8C5A3C;
+    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+    font-size: 1.8em;
+}
+
+.saludo-inicial {
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 1.5em;
+}
+
+.texto-carta p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.btn-firmar {
+    margin-top: 1.5em;
+    background: transparent;
+    border: 2px solid #B26E45;
+    color: #B26E45;
+    padding: 0.8em 2em;
+    font-size: 1em;
+    font-family: 'Palatino Linotype', serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-firmar:hover {
+    background-color: #B26E45;
+    color: #F5F1E6;
+    transform: scale(1.05);
+}
