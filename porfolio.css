@@ -57,7 +57,6 @@ body {
 
 .contenido-portada {
     border: 1px solid #4A3728;
-    /* Marco más fino para ganar espacio */
     width: 90%;
     height: 100%;
     padding: 1.5em;
@@ -189,7 +188,6 @@ body {
     color: #B26E45;
     margin-right: 15px;
     font-family: 'Courier New', monospace;
-    /* Estilo máquina de escribir para el índice */
 }
 
 .info-proy .enlace-proy {
@@ -233,7 +231,6 @@ body {
     line-height: 1.5;
     margin-bottom: 1.5em;
     font-style: italic;
-    /* Le da el toque de "nota personal" */
     color: #333;
 }
 
@@ -245,7 +242,6 @@ body {
 
 .especificaciones ul {
     list-style: "→ ";
-    /* Usamos una flecha técnica como viñeta */
     padding-left: 1.5em;
 }
 
@@ -266,20 +262,16 @@ body {
 /* Proyecto 2*/
 #aproyecto2 .especificaciones ul {
     list-style: "✎ ";
-    /* Un toque artístico para el proyecto de diseño */
     color: #4A3728;
 }
 
-/* Efecto de 'Sello de Calidad' para el área visual */
 #aproyecto2 .nota-adicional {
     border: 2px solid #8C5A3C;
     border-radius: 5px;
     background: rgba(244, 228, 188, 0.5);
     transform: rotate(1deg);
-    /* Ligera rotación para parecer un papel pegado */
 }
 
-/* Efecto al pasar el ratón por el proyecto */
 .lista-proyectos li:hover .numero {
     transform: scale(1.2);
     transition: transform 0.3s;
@@ -303,7 +295,6 @@ body {
 .foto-autor {
     width: 100%;
     height: 20em;
-    /* Controla qué tan grande es la imagen */
     overflow: hidden;
     border: 3px solid #8C5A3C;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
@@ -316,7 +307,6 @@ body {
     object-fit: cover;
     /* Ajusta la foto sin deformarla */
     filter: sepia(0.2);
-    /* Toque antiguo para ir con el cuaderno */
 }
 
 .bio-autor h2 {
@@ -371,7 +361,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* genera los espacios */
 }
 
 .tarjeta-presentacion .info-principal .nombre {
@@ -434,14 +423,12 @@ input[type="number"]::placeholder {
     background-color: #F5F1E6;
 }
 
-/* 1. Eliminamos las flechas por defecto del input number */
 #pagina::-webkit-inner-spin-button,
 #pagina::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-/* 2. Estilos base compartidos (Posición, Fuente y Color del signo) */
 #btn-prev,
 #pagina,
 #btn-next,
@@ -456,11 +443,9 @@ input[type="number"]::placeholder {
     color: #B26E45;
     font-weight: bold;
     outline: none;
-    /* Elimina el borde negro de selección en todos */
     transition: all 0.3s ease;
 }
 
-/* 3. Estilo específico para el círculo del número de PÁGINA */
 #pagina {
     left: 16em;
     width: 2em;
@@ -478,14 +463,11 @@ input[type="number"]::placeholder {
     border-radius: 50%;
 }
 
-/* 4. Estilo específico para los BOTONES (Sin círculo, solo el signo) */
 #btn-prev,
 #btn-next {
     width: 1.5em;
     background: none;
-    /* Quita el fondo circular */
     border: none;
-    /* Quita el borde circular */
     color: #F5F1E6;
     ;
 }
@@ -498,9 +480,8 @@ input[type="number"]::placeholder {
     left: 18em;
 }
 
-/* 5. Comportamiento al hacer FOCO en el input de página */
 #pagina:focus {
-    /* Resplandor color tierra en lugar de negro */
+
     box-shadow: 0 0 10px rgba(178, 110, 69, 0.6);
     border-color: #B26E45;
     background-color: #FFFFFF;
@@ -511,12 +492,9 @@ input[type="number"]::placeholder {
 #btn-prev:active,
 #btn-next:active {
     transform: scale(0.8);
-    /* El signo se encoge un poco al pulsar */
     color: #8C5A3C;
-    /* Se oscurece un poco */
 }
 
-/* Opcional: Cambio de color al pasar el ratón por los signos */
 #btn-prev:hover,
 #btn-next:hover {
     color: #8C5A3C;
@@ -530,7 +508,7 @@ input[type="number"]::placeholder {
     z-index: -2;
 }
 
-/* Estilo de cada marcador (el pequeño rectángulo) */
+/* Estilo de cada marcador  */
 .marcapaginas .marcador {
     position: absolute;
     left: 28.8em;
@@ -549,7 +527,6 @@ input[type="number"]::placeholder {
     width: 3em;
     z-index: 0;
 
-    /* Da la sensacion de tirar */
 }
 
 .marcapaginas .marcador:nth-child(1) {
@@ -613,7 +590,6 @@ input[type="number"]::placeholder {
 }
 
 .marcapaginas .marcador:hover:nth-child(2) {
-    /* font-size: 2em; */
     transform: scaleX(1.5);
     background-color: #B26E45;
     transition: 0.5s ease-in-out;
@@ -621,7 +597,6 @@ input[type="number"]::placeholder {
 
 .marcapaginas .marcador:hover:nth-child(3),
 .marcapaginas .marcador:hover:nth-child(4) {
-    /* font-size: 2em; */
     transform: scaleX(1.5);
     background-color: #3B2F2F;
     color: #F5F1E6;
@@ -756,7 +731,6 @@ input[type="number"]::placeholder {
     width: 30px;
     height: 30px;
     background-color: #8C5A3C;
-    /* Color madera */
     color: #F5F1E6;
     border: 2px solid #3B2F2F;
     border-radius: 4px;
@@ -778,7 +752,6 @@ input[type="number"]::placeholder {
     width: 30px;
     height: 30px;
     background-color: #8C5A3C;
-    /* Color madera */
     color: #F5F1E6;
     border: 2px solid #3B2F2F;
     border-radius: 4px;
@@ -1056,7 +1029,6 @@ input[type="number"]::placeholder {
     width: 320px;
     margin: 30px auto;
     box-shadow: 4px 4px 0px #A9745B;
-    /* Sombra sólida retro */
     font-family: 'Palatino Linotype';
     position: absolute;
     top: 32%;
@@ -1123,7 +1095,6 @@ input[type="number"]::placeholder {
     background: transparent;
     border: none;
     border-bottom: 1px dashed #B26E45;
-    /* Línea de puntos para escribir encima */
     color: #3B2F2F;
     font-family: 'Palatino Linotype';
     font-size: 0.9em;
@@ -1160,7 +1131,6 @@ input[type="number"]::placeholder {
 /* Botón para repetir (Oculto al inicio) */
 .btn-otro {
     display: none;
-    /* Se activa por JS */
     width: 100%;
     background: none;
     border: none;
@@ -1187,15 +1157,12 @@ input[type="number"]::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    /* Distribuye espacio igual */
 }
 
 .anilla {
     position: relative;
     height: 1.2em;
-    /* Hacemos la anilla más ancha que el contenedor para que sobresalga */
     width: 120%;
-    /* La desplazamos hacia la izquierda para que "envuelva" el lomo */
     left: -20%;
 
     background: linear-gradient(to bottom,
@@ -1459,11 +1426,8 @@ input[type="number"]::placeholder {
     width: 100%;
     height: 100%;
     background-color: rgba(59, 47, 47, 0.9);
-    /* Oscuro, tipo madera muy sombra */
-    z-index: 1000;
-    /* Por encima de todo */
+    z-index: 10;
     display: none;
-    /* Se activa con JS */
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(2px);
@@ -1474,14 +1438,12 @@ input[type="number"]::placeholder {
     width: 28em;
     padding: 2.5em;
     background-color: #F5F1E6;
-    /* Color papel */
     border: 1px solid #D2B48C;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(169, 116, 91, 0.2);
     font-family: 'Palatino Linotype', serif;
     color: #3B2F2F;
     text-align: center;
     transform: rotate(-1deg);
-    /* Ligera rotación natural */
 }
 
 /* Efecto de papel doblado en esquina (opcional) */
@@ -1504,7 +1466,6 @@ input[type="number"]::placeholder {
     width: 3.5em;
     height: 3.5em;
     background-color: #8C3C3C;
-    /* Rojo lacre */
     border-radius: 50%;
     border: 3px dashed #682626;
     color: #E0DCCF;
