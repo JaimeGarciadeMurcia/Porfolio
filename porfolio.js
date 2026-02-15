@@ -693,74 +693,65 @@ document.addEventListener('DOMContentLoaded', () => {
 //formulario
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Lógica del Modal de Bienvenida
-    const modal = document.getElementById('modal-bienvenida');
-    const btnEntrar = document.getElementById('btn-entrar-sitio');
-
-    if (btnEntrar && modal) {
-        btnEntrar.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-    }
-
-    // 2. Lógica del Formulario de Contacto
     const formulario = document.getElementById('contacto-biblioteca');
-    const btnNuevoRegistro = document.getElementById('nuevo-registro'); // Corregido el nombre
+    const btnNuevoRegistro = document.getElementById('nuevo-registro');
 
     if (formulario) {
-        const btnEnviar = formulario.querySelector('.btn-sellar');
+        // Usamos una función asíncrona para manejar el envío
+        formulario.onsubmit = async function (event) {
+            // 1. BLOQUEO TOTAL DE REDIRECCIÓN
+            event.preventDefault();
+            event.stopPropagation();
 
-        formulario.addEventListener('submit', async function (event) {
-            event.preventDefault(); // Evita recarga de página
-
+            const btnEnviar = this.querySelector('.btn-sellar');
             const formData = new FormData(this);
 
             try {
+                // 2. PETICIÓN AJAX SILENCIOSA
                 const response = await fetch(this.action, {
                     method: this.method,
                     body: formData,
-                    headers: { 'Accept': 'application/json' }
+                    headers: {
+                        'Accept': 'application/json' // Obliga a Formspree a responder con datos, no con una página
+                    }
                 });
 
-                if (response.ok) {
-                    alert('¡Registro enviado con éxito!');
+                const data = await response.json();
 
-                    // Cambios dinámicos en la interfaz
-                    if (btnEnviar) btnEnviar.style.display = 'none';
+                if (response.ok) {
+                    // ÉXITO: Mostramos alerta y cambiamos botones dinámicamente
+                    alert('¡Registro enviado con éxito!');
+                    btnEnviar.style.display = 'none';
                     if (btnNuevoRegistro) btnNuevoRegistro.style.display = 'block';
 
-                    // Deshabilitar campos para evitar envíos duplicados
-                    Array.from(formulario.elements).forEach(el => el.disabled = true);
+                    // Deshabilitamos campos para evitar cambios tras el envío
+                    Array.from(this.elements).forEach(el => el.disabled = true);
                     if (btnNuevoRegistro) btnNuevoRegistro.disabled = false;
                 } else {
-                    alert('Error en el servidor de envío.');
+                    // ERROR DE VALIDACIÓN (Ej: email 111@111)
+                    if (data.errors) {
+                        const errores = data.errors.map(err => err.message).join("\n");
+                        alert("Error en el formulario:\n" + errores);
+                    } else {
+                        alert("Hubo un error al procesar los datos. Inténtelo de nuevo.");
+                    }
                 }
             } catch (error) {
-                alert('Error al enviar. Nota: Formspree requiere que el sitio esté publicado (online) para funcionar correctamente.');
+                // ERROR DE RED
+                alert("Error de conexión: No se pudo contactar con el servidor.");
             }
-        });
+
+            return false; // Refuerzo extra para evitar el envío tradicional
+        };
     }
 
-    // 3. Lógica para el botón "Limpiar para enviar otro"
+    // Lógica del botón de reset
     if (btnNuevoRegistro) {
-        btnNuevoRegistro.addEventListener('click', () => {
+        btnNuevoRegistro.onclick = function () {
             formulario.reset();
-            // Habilitar campos de nuevo
             Array.from(formulario.elements).forEach(el => el.disabled = false);
-
-            // Restaurar botones
-            const btnEnviar = formulario.querySelector('.btn-sellar');
-            if (btnEnviar) btnEnviar.style.display = 'block';
-            btnNuevoRegistro.style.display = 'none';
-        });
+            formulario.querySelector('.btn-sellar').style.display = 'block';
+            this.style.display = 'none';
+        };
     }
-
-    // 4. Lógica para alertas de servicios no disponibles
-    const enlacesInactivos = document.querySelectorAll('.enlace-inactivo');
-    enlacesInactivos.forEach(enlace => {
-        enlace.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('Servicios no disponibles actualmente');
-        });
-    });
 });
