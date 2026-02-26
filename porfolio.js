@@ -585,11 +585,25 @@ document.getElementById('enlace-mostrar-libro3').addEventListener('click', funct
     document.getElementById('libro3').style.display = 'block';
 });
 
+function DesplazamientoHorizontal(idElemento) {
+    const el = document.getElementById(idElemento);
+    if (!el) return;
+
+    el.style.transition = 'none';
+    el.style.display = 'block';
+    el.style.left = '1%';
+    el.style.zIndex = '2';
+    setTimeout(() => {
+        el.style.transition = 'left 1s ease-in-out';
+        el.style.left = '72%';
+    }, 800);
+}
 document.getElementById('spot-proy2').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('libro2').style.display = 'none';
     document.querySelector('.proyectos-modal').style.display = 'none';
     document.getElementById('libro3').style.display = 'block';
+    DesplazamientoHorizontal('libro3');
 });
 
 document.getElementById('spot-proy1').addEventListener('click', function (e) {
@@ -597,6 +611,16 @@ document.getElementById('spot-proy1').addEventListener('click', function (e) {
     document.getElementById('libro2').style.display = 'block';
     document.querySelector('.proyectos-modal').style.display = 'none';
     document.getElementById('libro3').style.display = 'none';
+    DesplazamientoHorizontal('libro2');
+});
+document.getElementById('spot-porfolio').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('libro2').style.display = 'none';
+    document.querySelector('.proyectos-modal').style.display = 'none';
+    document.getElementById('libro3').style.display = 'none';
+    pagina = 0;
+    actualizarTexto();
+    casos();
 });
 
 /* Libro 2 */
