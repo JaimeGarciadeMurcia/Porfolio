@@ -570,21 +570,6 @@ document.getElementById('btn-close-sudoku').addEventListener('click', () => {
 document.getElementById('sudoku-level').addEventListener('change', generarNuevoSudoku);
 
 /* mostrar libros proyectos */
-
-document.getElementById('enlace-mostrar-libro2').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.getElementById('libro2').style.display = 'block';
-    document.querySelector('.proyectos-modal').style.display = 'none';
-    document.getElementById('libro3').style.display = 'none';
-});
-
-document.getElementById('enlace-mostrar-libro3').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.getElementById('libro2').style.display = 'none';
-    document.querySelector('.proyectos-modal').style.display = 'none';
-    document.getElementById('libro3').style.display = 'block';
-});
-
 function DesplazamientoHorizontal(idElemento) {
     const el = document.getElementById(idElemento);
     if (!el) return;
@@ -598,6 +583,22 @@ function DesplazamientoHorizontal(idElemento) {
         el.style.left = '72%';
     }, 800);
 }
+document.getElementById('enlace-mostrar-libro2').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('libro2').style.display = 'block';
+    document.querySelector('.proyectos-modal').style.display = 'none';
+    document.getElementById('libro3').style.display = 'none';
+    DesplazamientoHorizontal('libro2');
+});
+
+document.getElementById('enlace-mostrar-libro3').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('libro2').style.display = 'none';
+    document.querySelector('.proyectos-modal').style.display = 'none';
+    document.getElementById('libro3').style.display = 'block';
+    DesplazamientoHorizontal('libro3');
+});
+
 document.getElementById('spot-proy2').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('libro2').style.display = 'none';
